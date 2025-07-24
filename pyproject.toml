@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcp-agentor"
+version = "0.1.0"
+authors = [
+    {name="Aniket Dhumal",email="anikethd1410@gmail.com"},
+  { name="Akshat Kotpalliwar", email="akshatkot@gmail.com" }
+]
+description = "A Python library that provides intelligent multi-agent orchestration for Google Cloud Platform. Routes user messages to appropriate agents, manages shared memory via Firestore, and supports agent-to-agent communication using a defined ACP (Agent Communication Protocol)."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "google-cloud-firestore>=2.0.0",
+    "google-cloud-aiplatform>=1.0.0"
+]
+
+license = "LGPL-2.1-only"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: System :: Distributed Computing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed"
+]
+
+[project.urls]
+Homepage = "https://github.com/IntegerAlex/gcp-agentor"
+Issues = "https://github.com/IntegerAlex/gcp-agentor/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gcp-agentor*"]
