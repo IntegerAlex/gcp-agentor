@@ -1,6 +1,6 @@
 # 🚀 gcp-agentor
 
-**GCP-Based Multi-Agent Orchestration Library**
+## GCP-Based Multi-Agent Orchestration Library
 
 A Python library that provides intelligent multi-agent orchestration for Google Cloud Platform. Routes user messages to appropriate agents, manages shared memory via Firestore, and supports agent-to-agent communication using a defined ACP (Agent Communication Protocol).
 
@@ -52,6 +52,7 @@ print(response)
 ## 📦 Core Components
 
 ### 1. Agent Registry (`agent_registry.py`)
+
 Manages registered agents and their metadata.
 
 ```python
@@ -62,6 +63,7 @@ registry.register("crop_advisor", CropAdvisorAgent(), {"capabilities": ["crop_ad
 ```
 
 ### 2. Router (`router.py`)
+
 Routes ACP messages to appropriate agents based on intent.
 
 ```python
@@ -72,6 +74,7 @@ response = router.route(acp_message)
 ```
 
 ### 3. Memory Manager (`memory.py`)
+
 Shared memory layer using Firestore.
 
 ```python
@@ -83,6 +86,7 @@ context = memory.get_context("user123", "last_crop")
 ```
 
 ### 4. ACP Protocol (`acp.py`)
+
 Standardized message schema for agent communication.
 
 ```python
@@ -99,7 +103,7 @@ message = ACPMessage({
 
 ## 🏗️ Architecture
 
-```
+```mermaid
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   User Input    │───▶│   Agent Router  │───▶│  Agent Registry │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
@@ -211,14 +215,13 @@ class ACPMessage:
 
 ## 📄 License
 
-MIT License - see LICENSE file for details.
+ LGPL-2.1-only License - see [LICENSE](./LICENSE) file for details.
 
 ## 🆘 Support
 
-- 📧 Email: support@gcp-agentor.com
-- 🐛 Issues: [GitHub Issues](https://github.com/your-org/gcp-agentor/issues)
-- 📖 Docs: [Documentation](https://gcp-agentor.readthedocs.io)
+- 🐛 Issues: [GitHub Issues](https://github.com/IntegerAlex/gcp-agentor/issues)
+- 📖 Docs: [Documentation](https://github.com/IntegerAlex/gcp-agentor/blob/main/PROJECT_SUMMARY.md)
 
 ---
 
-**Built with ❤️ for the GCP community** 
+Built with ❤️ for the GCP community
